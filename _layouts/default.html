@@ -3,38 +3,78 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ page.title }}</title>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif site.description %}{{ site.description }}{% endif %}" />
+    <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ',' }},{% endif %}{{ site.keywords }}" />
+    <meta name="author" content="{{ site.author }}">
+    <meta name="generator" content="jekyll" />
 
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/main.css">
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-
-    <div class="site">
-        <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-        </div>
-
-        {{ content }}
-
-        <div class="footer">
-            <div class="contact">
-                <p>
-                    Your Name<br />
-                    What You Are<br />
-                    you@example.com
-                </p>
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">{{ site.title }}</a>
             </div>
-            <div class="contact">
-                <p>
-                    <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                    <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-                </p>
-            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">@enslam</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
         </div>
     </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-3 info" id="sidebar" role="navigation">
+                <h1 class="title"><a href="/">{{ site.title }}</a></h1>
+                <div><img src="http://www.gravatar.com/avatar/ea0cd17bcc28810e1581fa9881298c60?s=150" /></div>
+                <p>Aussie software developer</p>
+                <p>Founder of <a href="http://www.leftmatic.com">Leftmatic</a></p>
+                <hr />
+                <ul class="links">
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">@enslam</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div><!--/span-->
+        
+            <div class="col-xs-12 col-sm-9">
+                {{ content }}
+            </div><!--/span-->
+        </div><!--/row-->
+    </div>
+
+    <hr>
+
+    <footer class="page-footer">
+        <div class="col-xs-6 col-sm-3" id="sidebar" role="navigation">
+        </div>
+        <div class="col-xs-12 col-sm-9">
+            <p>Copyright Dale Williams 2013.</p>
+            <p>Powered by Jekyll and Github Pages. <a href="https://github.com/Enslam/enslam.github.io">Full source here</a>.</p>
+        </div>
+    </footer>
     <script src="/static/js/bootstrap.js"></script>
 </body>
 </html>

@@ -1,0 +1,30 @@
+# standard jekyll configuration
+permalink: /blog/:year/:month/:title
+safe: true
+lsi: false
+pygments: true
+exclude: ['Rakefile', 'README.md', 'config.rb']
+markdown: rdiscount
+
+# configuration required for some pages
+
+domain: dale-williams.com
+title: Dale Williams
+description: Dale Williams is a software developer, specialising in web development and all things .Net.
+keywords: dale williams
+author: Dale Williams
+email: dale@dale-williams.com
+
+# configuration for ehancements, uncomment to enable
+
+feedburner:
+  id: DaleWilliams
+
+#google_analytics:
+#  account: UA-20275850-1
+
+# github:
+#   username: ghusername
+
+disqus:
+  id: dalewilliams
