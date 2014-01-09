@@ -2,7 +2,7 @@
 layout: default
 title: All About Dale
 description: Dale Williams is a .Net software developer based in Melbourne Australia.
-permalink: /
+permalink: /about/
 priority: 0.8
 ---
 My name is Dale Williams. I'm a software developer based in Melbourne Australia working for [PageUp People](http://pageuppeople.com).
