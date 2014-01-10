@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif site.description %}{{ site.description }}{% endif %}" />
     <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ',' }},{% endif %}{{ site.keywords }}" />
     <meta name="author" content="{{ site.author }}">
@@ -21,46 +21,25 @@
     <![endif]-->
 </head>
 <body>
-    <div class="navbar navbar-default navbar-static-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">{{ site.title }}</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">About me</a></li>
-                    <li><a href="#">@enslam</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                </ul>
-            </div><!--/.nav-collapse -->
-        </div>
-    </div>
-    
     <div class="container">
         <div class="row">
-            <div class="col-xs-6 col-sm-3 info" id="sidebar" role="navigation">
-                <h1 class="title"><a href="/">{{ site.title }}</a></h1>
-                <div><img src="http://www.gravatar.com/avatar/ea0cd17bcc28810e1581fa9881298c60?s=150" /></div>
-                <p>Aussie software developer</p>
-                <p>Founder of <a href="http://www.leftmatic.com">Leftmatic</a></p>
-                <hr />
-                <ul class="links">
-                    <li><a href="/about">About me</a></li>
-                    <li><a href="#">@enslam</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
+            <div class="col-sm-5 col-md-4 info-outer" role="navigation">
+                <div class="info">
+                    <h1 class="title"><a href="/">{{ site.title }}</a></h1>
+                    <div><img src="http://www.gravatar.com/avatar/ea0cd17bcc28810e1581fa9881298c60?s=150" /></div>
+                    <p>Aussie software developer</p>
+                    <p>Founder of <a href="http://www.leftmatic.com">Leftmatic</a></p>
+                    <hr />
+                    <ul class="links">
+                        <li><a href="/about">About me</a></li>
+                        <li><a href="https://twitter.com/enslam">@enslam</a></li>
+                        <li><a href="/work">Work</a></li>
+                        <li><a href="http://www.linkedin.com/pub/dale-williams/16/18b/283">LinkedIn</a></li>
+                    </ul>
+                </div>
             </div><!--/span-->
         
-            <div class="col-xs-12 col-sm-9">
+            <div class="col-sm-7 col-md-8">
                 {{ content }}
             </div><!--/span-->
         </div><!--/row-->

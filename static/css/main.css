@@ -6,10 +6,23 @@
   margin-bottom: 19px;
 }
 
+.container {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
 body {
-	max-width: 1200px;
 	background-color: #F1F1F1;
 	font-family: Georgia, serif;
+}
+.info-outer {
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: fixed;
+    }
 }
 
 .info {
