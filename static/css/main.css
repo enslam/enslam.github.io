@@ -2,10 +2,6 @@
   min-height: 2000px;
 }
 
-.navbar-static-top {
-  margin-bottom: 19px;
-}
-
 .container {
   margin-right: -15px;
   margin-left: -15px;
@@ -15,28 +11,84 @@ body {
 	background-color: #F1F1F1;
 	font-family: Georgia, serif;
 }
-.info-outer {
-    position: relative;
-}
 
-@media (min-width: 768px) {
-    .sidebar {
-        position: fixed;
-    }
-}
-
-.info {
+.sidebar {
 	background: #4C6E92;
+    color: white;
+    height: 100%;
+}
+
+/*
+ * Side navigation
+ *
+ * Scrollspy and affixed enhanced navigation to highlight sections and secondary
+ * sections of docs content.
+ */
+
+/* By default it's not affixed in mobile views, so undo that */
+.sidebar.affix {
+  position: static;
+}
+
+/* First level of nav */
+.sidenav {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top:    10px;
+  padding-bottom: 10px;
+}
+
+/* All levels of nav */
+.sidebar .nav > li > a {
+  display: block;
+  color: white;
+  padding: 5px 20px;
+}
+.sidebar .nav > li > a:hover,
+.sidebar .nav > li > a:focus {
+  text-decoration: none;
+    background: transparent;
 }
 
 
-.info h1 {
+/* Show and affix the side nav when space allows it */
+@media (min-width: 992px) {
+  .sidebar .nav > .active > ul {
+    display: block;
+  }
+  /* Widen the fixed sidebar */
+  .sidebar.affix,
+  .sidebar.affix-bottom {
+    width: 213px;
+  }
+  .sidebar.affix {
+    position: fixed; /* Undo the static from mobile first approach */
+  }
+  .sidebar.affix-bottom {
+    position: absolute; /* Undo the static from mobile first approach */
+  }
+  .sidebar.affix-bottom .sidenav,
+  .sidebar.affix .sidenav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1200px) {
+  /* Widen the fixed sidebar again */
+  .sidebar.affix-bottom,
+  .sidebar.affix {
+    width: 263px;
+  }
+}
+
+
+.sidebar h1 {
 	margin: 0;
 	padding: 30px 20px 10px 20px;
 	text-align: center;
 }
 
-.info h1 a {
+.sidebar h1 a {
 	color: white;
 	text-decoration: none;
 
@@ -44,36 +96,26 @@ body {
 	text-shadow: rgba(0, 0, 0, 0.5) 0 2px 4px;
 }
 
-.info p {
+.sidebar p {
 	padding: 0 20px;
 	color: white;
 	text-align: center;
 }
 
-.info p a {
+.sidebar p a {
 	color: white;
     text-decoration: underline;
 }
 
-
-.info .links {
-	padding: 0 34px;
-	list-style: none;
-}
-
-.info .links li a {
-	display: inline-block;
-	height: 30px;
-	padding-top: 8px;
-	padding-left: 45px;
+.sidebar .links li a {
 
 	color: white;
 	text-decoration: none;
 }
 
-.info .links li a:hover { text-decoration: underline; }
-.info .links li a:focus { text-decoration: underline; }
-.info .links li a:active { text-decoration: underline; }
+.sidebar .links li a:hover { text-decoration: underline; }
+.sidebar .links li a:focus { text-decoration: underline; }
+.sidebar .links li a:active { text-decoration: underline; }
 
 .page-footer p {
 	margin: 5px 0 0 0;

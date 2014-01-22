@@ -23,14 +23,14 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-sm-5 col-md-4 info-outer" role="navigation">
-                <div class="info">
+            <div class="col-md-3 col-sm-12">
+                <div class="sidebar" data-spy="affix" role="navigation">
                     <h1 class="title"><a href="/">{{ site.title }}</a></h1>
-                    <div><img src="http://www.gravatar.com/avatar/ea0cd17bcc28810e1581fa9881298c60?s=150" /></div>
+                    <div class="hidden-sm hidden-xs"><img src="http://www.gravatar.com/avatar/ea0cd17bcc28810e1581fa9881298c60?s=150" /></div>
                     <p>Aussie software developer</p>
                     <p>Founder of <a href="http://www.leftmatic.com">Leftmatic</a></p>
                     <hr />
-                    <ul class="links">
+                    <ul class="sidenav nav">
                         <li><a href="/about">About me</a></li>
                         <li><a href="https://twitter.com/enslam">@enslam</a></li>
                         <li><a href="/work">Work</a></li>
@@ -39,7 +39,7 @@
                 </div>
             </div><!--/span-->
         
-            <div class="col-sm-7 col-md-8">
+            <div class="col-md-9 col-sm-12">
                 {{ content }}
             </div><!--/span-->
         </div><!--/row-->
@@ -55,6 +55,7 @@
             <p>Powered by Jekyll and Github Pages. <a href="https://github.com/Enslam/enslam.github.io">Full source here</a>.</p>
         </div>
     </footer>
+    <script src="/static/js/jquery-2.0.3.min.js"></script>
     <script src="/static/js/bootstrap.js"></script>
 </body>
 </html>
