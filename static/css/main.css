@@ -1,11 +1,5 @@
-﻿body {
-  min-height: 2000px;
-}
+﻿
 
-.container {
-  margin-right: -15px;
-  margin-left: -15px;
-}
 
 body {
 	background-color: #F1F1F1;
@@ -16,6 +10,10 @@ body {
 	background: #4C6E92;
     color: white;
     height: 100%;
+    
+  margin-right: -15px;
+  margin-left: -15px;
+
 }
 
 /*
@@ -50,6 +48,11 @@ body {
     background: transparent;
 }
 
+@media (min-width: 768px) {
+    .container {
+        width: auto;
+    }
+}
 
 /* Show and affix the side nav when space allows it */
 @media (min-width: 992px) {
