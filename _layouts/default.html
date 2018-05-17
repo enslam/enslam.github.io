@@ -3,11 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif site.description %}{{ site.description }}{% endif %}" />
     <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ',' }},{% endif %}{{ site.keywords }}" />
-    <meta name="author" content="{{ site.author }}">
     <meta name="generator" content="jekyll" />
 
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
