@@ -12,7 +12,8 @@ domain: dale-williams.com
 title: Dale Williams
 description: Dale Williams is a software developer, specialising in web development and all things .Net.
 keywords: dale williams
-author: Dale Williams
+author:
+  twitter: enslam
 email: dale@dale-williams.com
 
 # configuration for ehancements, uncomment to enable
@@ -28,3 +29,31 @@ feedburner:
 
 disqus:
   id: dalewilliams
+
+plugins:
+  - jekyll-seo-tag
+
+twitter:
+  username: enslam
+  card: summary
+
+facebook:
+  publisher: thedalewilliams
+
+social:
+  name: Dale Williams
+  links:
+    - https://twitter.com/enslam
+    - https://www.facebook.com/thedalewilliams
+    - https://www.linkedin.com/in/dale-williams
+    - https://plus.google.com/u/0/104898452951590306204
+    - https://github.com/thedalewilliams
+    - https://www.youtube.com/channel/UCCc-jg3hxxL-0RHc6GK5yOA
+
+#webmaster_verifications:
+#  google: 1234
+#  bing: 1234
+#  alexa: 1234
+#  yandex: 1234
+#  baidu: 1234
+
